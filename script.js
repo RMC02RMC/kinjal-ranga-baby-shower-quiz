@@ -10,9 +10,9 @@ const quizData = [
   { q:"Babies born with kneecaps?", options:["True","False","Sometimes","Only boys"], correct:1 },
   { q:"Recognize mom’s voice?", options:["True","False","After 1 month","After birth"], correct:0 },
   { q:"Newborn heart rate?", options:["60–80","80–100","120–160","180+"], correct:2 },
-  { q:"Babies cry without tears?", options:["True","False","Only boys","Only girls"], correct:0 },
-  { q:"Babies born with fingerprints?", options:["True","False","Later","Only twins"], correct:0 },
-  { q:"Newborn vision distance?", options:["2–4 inches","8–12 inches","2 feet","Very clear"], correct:1 },
+  { q:"Cry without tears?", options:["True","False","Only boys","Only girls"], correct:0 },
+  { q:"Born with fingerprints?", options:["True","False","Later","Only twins"], correct:0 },
+  { q:"Clear vision distance?", options:["2–4 in","8–12 in","2 ft","Very clear"], correct:1 },
   { q:"Babies hiccup in womb?", options:["True","False","Only girls","Only boys"], correct:0 }
 ];
 
@@ -27,7 +27,7 @@ tot.textContent = quizData.length;
 function loadQuestion() {
   qEl.textContent = quizData[i].q;
   optEl.innerHTML = "";
-  quizData[i].options.forEach((o, idx) => {
+  quizData[i].options.forEach((o) => {
     const d = document.createElement("div");
     d.className = "option";
     d.textContent = o;
@@ -42,7 +42,18 @@ function showAnswer() {
   opts[quizData[i].correct].textContent += " 🎉👶🍼";
 }
 
-function nextQuestion() { if (i < quizData.length-1) { i++; loadQuestion(); } }
-function prevQuestion() { if (i > 0) { i--; loadQuestion(); } }
+function nextQuestion() {
+  if (i < quizData.length - 1) {
+    i++;
+    loadQuestion();
+  }
+}
+
+function prevQuestion() {
+  if (i > 0) {
+    i--;
+    loadQuestion();
+  }
+}
 
 loadQuestion();
