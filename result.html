@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Winner 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="winner-container">
+  <h1>🎊 HURRAY 🎊</h1>
+  <h2>🏆 Winner</h2>
+
+  <h1 class="winner-name" id="winner"></h1>
+
+  <p class="celebrate-text">
+    🎉🍼 Let’s celebrate Kinjal & Ranga’s Baby Shower 🍼🎉
+  </p>
+</div>
+
+<script>
+document.getElementById("winner").textContent =
+  localStorage.getItem("winnerName") || "Winner";
+</script>
+
+</body>
+</html>
