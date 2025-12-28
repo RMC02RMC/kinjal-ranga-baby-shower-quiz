@@ -8,31 +8,41 @@ body {
   align-items: center;
 }
 
-/* BUTTON */
+/* ================= BUTTON STYLE ================= */
 .btn {
-  padding: 15px 35px;
-  font-size: 20px;
-  border-radius: 14px;
+  padding: 12px 26px;              /* smaller size */
+  font-size: 17px;                 /* reduced font */
+  border-radius: 12px;
   border: none;
   background: linear-gradient(135deg, #ff99cc, #ff4d88);
   color: white;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0 8px 20px rgba(255, 77, 136, 0.4);
-  transition: 0.2s;
+  box-shadow: 0 6px 16px rgba(255, 77, 136, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 22px rgba(255, 77, 136, 0.55);
 }
 
-/* WELCOME */
+/* ================= WELCOME PAGE ================= */
 .welcome-container {
   background: white;
   padding: 40px;
   border-radius: 25px;
   text-align: center;
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.welcome-container h1 {
+  font-size: 42px;
+  color: #ff4d88;
+}
+
+.welcome-container h2 {
+  font-size: 32px;
 }
 
 .welcome-img {
@@ -42,9 +52,10 @@ body {
 
 .welcome-text {
   font-size: 20px;
+  margin-bottom: 25px;
 }
 
-/* QUIZ */
+/* ================= QUIZ PAGE ================= */
 .quiz-container {
   background: white;
   padding: 35px;
@@ -52,12 +63,25 @@ body {
   width: 80%;
   max-width: 900px;
   text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
+.quiz-container h1 {
+  font-size: 34px;
+  color: #ff4d88;
+}
+
+#question {
+  font-size: 28px;
+  margin: 25px 0;
+}
+
+/* OPTIONS */
 .options {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  margin-bottom: 10px;   /* space below options */
 }
 
 .option {
@@ -65,20 +89,45 @@ body {
   border-radius: 12px;
   border: 2px solid #ff99cc;
   cursor: pointer;
+  font-size: 18px;
+  background: #fff;
+  transition: background 0.2s ease;
+}
+
+.option:hover {
+  background: #ffe6f0;
 }
 
 .correct {
-  background: #c8f7c5;
+  background: #c8f7c5 !important;
+  border-color: #28a745;
   font-weight: bold;
 }
 
-/* WINNER */
+/* BUTTON GROUP (MOVED DOWN) */
+.buttons {
+  margin-top: 35px;   /* pushes buttons down */
+}
+
+/* COUNTER */
+.counter {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* ================= WINNER PAGES ================= */
 .winner-container {
   background: white;
   padding: 45px;
   border-radius: 30px;
   text-align: center;
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.winner-text {
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .winner-container input {
@@ -93,6 +142,7 @@ body {
 .winner-name {
   color: #ff4d88;
   font-size: 46px;
+  margin: 20px 0;
 }
 
 .celebrate-text {
