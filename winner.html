@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Winner</title>
+  <meta charset="UTF-8">
+  <title>Winner Entry</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="winner-container">
   <h1>🎉 Party Time 🎉</h1>
-
   <p class="winner-text">Enter the Winner’s Name 👑</p>
 
   <input type="text" id="winnerName" placeholder="Winner Name">
 
-  <button onclick="showWinner()">Celebrate 🎊</button>
-
-  <h2 id="winnerResult"></h2>
+  <br><br>
+  <button class="btn" onclick="goToResult()">Celebrate 🎊</button>
 </div>
 
 <script>
-function showWinner() {
-  const name = document.getElementById("winnerName").value;
-  if (name.trim() !== "") {
-    document.getElementById("winnerResult").innerHTML =
-      `🎊 HURRAY! 🎊 <br> 🏆 Winner: <span class="winner-name">${name}</span> 🍼🎉`;
+function goToResult() {
+  const name = document.getElementById("winnerName").value.trim();
+  if (name !== "") {
+    localStorage.setItem("winnerName", name);
+    window.location.href = "result.html";
   }
 }
 </script>
