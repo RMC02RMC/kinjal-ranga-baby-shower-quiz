@@ -2,36 +2,49 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #ffe6f0, #fff6cc);
   margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-/* Welcome */
+/* BUTTON */
+.btn {
+  padding: 15px 35px;
+  font-size: 20px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #ff99cc, #ff4d88);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(255, 77, 136, 0.4);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* WELCOME */
 .welcome-container {
   background: white;
   padding: 40px;
   border-radius: 25px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
 .welcome-img {
-  width: 250px;
+  width: 260px;
   margin: 20px 0;
 }
 
-.start-btn {
-  padding: 15px 30px;
-  font-size: 22px;
-  border-radius: 12px;
-  border: none;
-  background: #ff99cc;
-  color: white;
+.welcome-text {
+  font-size: 20px;
 }
 
-/* Quiz */
+/* QUIZ */
 .quiz-container {
   background: white;
   padding: 35px;
@@ -59,21 +72,29 @@ body {
   font-weight: bold;
 }
 
-/* Winner */
+/* WINNER */
 .winner-container {
   background: white;
-  padding: 40px;
-  border-radius: 25px;
+  padding: 45px;
+  border-radius: 30px;
   text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
 .winner-container input {
-  padding: 12px;
-  font-size: 18px;
-  margin: 15px 0;
+  padding: 14px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: 2px solid #ff99cc;
+  width: 260px;
+  text-align: center;
 }
 
 .winner-name {
   color: #ff4d88;
-  font-size: 32px;
+  font-size: 46px;
+}
+
+.celebrate-text {
+  font-size: 22px;
 }
