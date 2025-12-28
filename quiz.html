@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Quiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,9 +14,9 @@
   <div id="options" class="options"></div>
 
   <div class="buttons">
-    <button onclick="prevQuestion()">⬅ Back</button>
-    <button onclick="showAnswer()">👀 Show Answer</button>
-    <button onclick="nextQuestion()">Next ➡</button>
+    <button class="btn" onclick="prevQuestion()">⬅ Back</button>
+    <button class="btn" onclick="showAnswer()">👀 Show Answer</button>
+    <button class="btn" onclick="nextQuestion()">Next ➡</button>
   </div>
 
   <p class="counter">
@@ -23,7 +24,7 @@
   </p>
 
   <a href="winner.html">
-    <button class="finish-btn">Finish Quiz 🎉</button>
+    <button class="btn">Finish Quiz 🎉</button>
   </a>
 </div>
 
