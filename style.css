@@ -1,65 +1,114 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #ffe6f0, #fff6cc);
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
-.quiz-container {
+/* Welcome Page */
+.welcome-container {
   background: white;
-  padding: 30px 40px;
-  border-radius: 20px;
-  width: 80%;
-  max-width: 800px;
+  padding: 40px;
+  border-radius: 25px;
   text-align: center;
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
-h1 {
-  font-size: 36px;
+.welcome-container h1 {
+  font-size: 42px;
   color: #ff4d88;
+}
+
+.welcome-container h2 {
+  font-size: 34px;
   margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.start-btn {
+  padding: 15px 30px;
+  font-size: 22px;
+  border-radius: 12px;
+  border: none;
+  background-color: #ff99cc;
+  color: white;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background-color: #ff4d88;
+}
+
+/* Quiz Page */
+.quiz-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 25px;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.quiz-container h1 {
+  font-size: 34px;
+  color: #ff4d88;
 }
 
 #question {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin: 25px 0;
 }
 
-#answer {
-  font-size: 24px;
-  color: #28a745;
-  margin-top: 15px;
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.hidden {
-  display: none;
+.option {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: 2px solid #ff99cc;
+  cursor: pointer;
+  background: #fff;
 }
 
-.buttons {
-  margin-top: 25px;
+.option:hover {
+  background-color: #ffe6f0;
 }
 
-button {
+.correct {
+  background-color: #c8f7c5 !important;
+  border-color: #28a745;
+  font-weight: bold;
+}
+
+.buttons button {
   padding: 12px 20px;
   margin: 10px;
   font-size: 18px;
-  border: none;
   border-radius: 10px;
-  cursor: pointer;
+  border: none;
   background-color: #ff99cc;
   color: white;
+  cursor: pointer;
 }
 
-button:hover {
+.buttons button:hover {
   background-color: #ff4d88;
 }
 
 .counter {
   margin-top: 15px;
   font-size: 18px;
-  color: #555;
 }
