@@ -2,13 +2,13 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #ffe6f0, #fff6cc);
   margin: 0;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-/* Welcome Page */
+/* Welcome */
 .welcome-container {
   background: white;
   padding: 40px;
@@ -17,19 +17,9 @@ body {
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
-.welcome-container h1 {
-  font-size: 42px;
-  color: #ff4d88;
-}
-
-.welcome-container h2 {
-  font-size: 34px;
-  margin-bottom: 20px;
-}
-
-.welcome-text {
-  font-size: 20px;
-  margin-bottom: 30px;
+.welcome-img {
+  width: 250px;
+  margin: 20px 0;
 }
 
 .start-btn {
@@ -37,78 +27,53 @@ body {
   font-size: 22px;
   border-radius: 12px;
   border: none;
-  background-color: #ff99cc;
+  background: #ff99cc;
   color: white;
-  cursor: pointer;
 }
 
-.start-btn:hover {
-  background-color: #ff4d88;
-}
-
-/* Quiz Page */
+/* Quiz */
 .quiz-container {
   background: white;
-  padding: 30px 40px;
+  padding: 35px;
   border-radius: 25px;
   width: 80%;
   max-width: 900px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-}
-
-.quiz-container h1 {
-  font-size: 34px;
-  color: #ff4d88;
-}
-
-#question {
-  font-size: 28px;
-  margin: 25px 0;
 }
 
 .options {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  margin-bottom: 25px;
 }
 
 .option {
   padding: 15px;
-  font-size: 20px;
   border-radius: 12px;
   border: 2px solid #ff99cc;
   cursor: pointer;
-  background: #fff;
-}
-
-.option:hover {
-  background-color: #ffe6f0;
 }
 
 .correct {
-  background-color: #c8f7c5 !important;
-  border-color: #28a745;
+  background: #c8f7c5;
   font-weight: bold;
 }
 
-.buttons button {
-  padding: 12px 20px;
-  margin: 10px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  background-color: #ff99cc;
-  color: white;
-  cursor: pointer;
+/* Winner */
+.winner-container {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
 }
 
-.buttons button:hover {
-  background-color: #ff4d88;
+.winner-container input {
+  padding: 12px;
+  font-size: 18px;
+  margin: 15px 0;
 }
 
-.counter {
-  margin-top: 15px;
-  font-size: 18px;
+.winner-name {
+  color: #ff4d88;
+  font-size: 32px;
 }
