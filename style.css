@@ -2,7 +2,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #ffe6f0, #fff6cc);
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +10,8 @@ body {
 
 /* ================= BUTTON STYLE ================= */
 .btn {
-  padding: 12px 26px;              /* smaller size */
-  font-size: 17px;                 /* reduced font */
+  padding: 12px 26px;
+  font-size: 17px;
   border-radius: 12px;
   border: none;
   background: linear-gradient(135deg, #ff99cc, #ff4d88);
@@ -58,12 +58,16 @@ body {
 /* ================= QUIZ PAGE ================= */
 .quiz-container {
   background: white;
-  padding: 35px;
+  padding: 40px 40px 50px; /* extra bottom padding */
   border-radius: 25px;
   width: 80%;
   max-width: 900px;
+  min-height: 650px;       /* frame height balanced */
   text-align: center;
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .quiz-container h1 {
@@ -71,21 +75,22 @@ body {
   color: #ff4d88;
 }
 
+/* QUESTION */
 #question {
   font-size: 28px;
-  margin: 25px 0;
+  margin: 30px 0 25px;
 }
 
 /* OPTIONS */
 .options {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 10px;   /* space below options */
+  gap: 18px;
+  margin-bottom: 30px; /* space before buttons */
 }
 
 .option {
-  padding: 15px;
+  padding: 16px;
   border-radius: 12px;
   border: 2px solid #ff99cc;
   cursor: pointer;
@@ -104,14 +109,15 @@ body {
   font-weight: bold;
 }
 
-/* BUTTON GROUP (MOVED DOWN) */
+/* BUTTON GROUP – MOVED DOWN */
 .buttons {
-  margin-top: 35px;   /* pushes buttons down */
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 /* COUNTER */
 .counter {
-  margin-top: 18px;
+  margin-top: 10px;
   font-size: 18px;
   color: #555;
 }
