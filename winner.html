@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Winner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="winner-container">
+  <h1>🎉 Party Time 🎉</h1>
+
+  <p class="winner-text">Enter the Winner’s Name 👑</p>
+
+  <input type="text" id="winnerName" placeholder="Winner Name">
+
+  <button onclick="showWinner()">Celebrate 🎊</button>
+
+  <h2 id="winnerResult"></h2>
+</div>
+
+<script>
+function showWinner() {
+  const name = document.getElementById("winnerName").value;
+  if (name.trim() !== "") {
+    document.getElementById("winnerResult").innerHTML =
+      `🎊 HURRAY! 🎊 <br> 🏆 Winner: <span class="winner-name">${name}</span> 🍼🎉`;
+  }
+}
+</script>
+
+</body>
+</html>
